@@ -269,6 +269,9 @@
   .h-\[128px\] {
     height: 128px;
   }
+  .h-lvh {
+    height: 100lvh;
+  }
   .h-svh {
     height: 100svh;
   }

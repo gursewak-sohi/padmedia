@@ -278,6 +278,9 @@
   .min-h-\[336px\] {
     min-height: 336px;
   }
+  .min-h-lvh {
+    min-height: 100lvh;
+  }
   .min-h-svh {
     min-height: 100svh;
   }

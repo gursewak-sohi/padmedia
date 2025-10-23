@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'Quincy CF';
+  src: url('../fonts/quincy-cf/regular/font.woff2') format('woff2'),
+      url('../fonts/quincy-cf/regular/font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {  
+  --font-display: "Quincy CF", sans-serif; 
+  --font-sans: "DM Sans", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+  --color-foreground: #143134;
+  --color-background: #F7F1ED;
+  --color-warm-white: #FEFEFD;
+  --color-blue: #75ABF9;
+  --color-teal: #2EE8B7;
+  --color-purple: #AB90FC;
+}
+
+@layer components {
+  .container {
+    @apply w-full max-w-[1440px]! mx-auto px-7 md:px-20;
+  }
+}
+
+.border-gradient-top {
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(90deg, #F7F1ED 0%, #AB90FC 25%, #75ABF9 50.48%, #2EE8B7 75%, #143134 99.52%);
+  border-image-slice: 1;
+}
+
+.border-gradient-left {
+  border-left: 1px solid transparent;
+  border-image: linear-gradient(to bottom, #F7F1ED 0%, #AB90FC 25%, #75ABF9 50.48%, #2EE8B7 75%, #143134 99.52%);
+  border-image-slice: 1;
+}
+
+ 
+
+

@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PadMedia</title>
     <link rel="shortcut icon" href="./favicon.svg" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Main CSS -->
     <link href="./assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="antialiased text-foreground bg-background font-sans">
-
     <!-- Header -->
-    <header class="absolute z-30 py-28 w-full">
+    <header class="absolute z-30 py-20 md:py-24 w-full">
       <div class="container">
         <a class="w-[240px] md:w-auto inline-block" href="index.html">
           <img width="363" height="74" src="assets/images/logo.svg" alt="">
@@ -21,19 +22,26 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative z-0 py-10">
+    <section class="relative z-0">
       <!-- Bg Image -->
         <div class="absolute inset-0 -z-10">
           <img class="size-full object-cover" src="assets/images/header-bg@2x.jpg" alt="bg">
         </div>
         <!-- min-h-svh -->
         <div class="container">
-          <div class="grid lg:grid-cols-2 min-h-svh md:min-h-[calc(100vh+80px)] items-end md:items-center md:pb-14">
+          <div class="grid lg:grid-cols-2 h-svh lg:h-[calc(100vh+160px)] items-end md:items-center pb-14">
             <div>&nbsp;</div>
             <div class="flex flex-col md:items-start gap-10 xl:pr-10">
-              <h1 class="font-display text-[68px] md:text-[88px] leading-[68px]">Headline<br/> copy here</h1>
-              <p class="text-xl md:text-2xl leading-[1.2]">At Pad Media, we specialise in crafting custom web applications that elevate your business and solve problems for your customers. Our dedicated team is here to turn your vision into reality.</p>
-              <button class="font-roboto px-5 py-2.5 text-xl rounded-xl font-medium bg-warm-white cursor-pointer shadow-[2px_2px_24px_0px_#0000001A]">Book a discovery call</button>
+              <h1 data-aos="fade-up" class="font-display text-[68px] md:text-[88px] leading-[68px]">Headline<br/> copy here</h1>
+              <p data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-2xl leading-[1.2]">At Pad Media, we specialise in crafting custom web applications that elevate your business and solve problems for your customers. Our dedicated team is here to turn your vision into reality.</p>
+              <div data-aos="fade-up" data-aos-delay="400" class="w-full">
+                <button class="font-roboto px-5 py-2.5 text-xl rounded-xl group font-medium bg-warm-white cursor-pointer shadow-[2px_2px_24px_0px_#0000001A]">
+                  <div class="flex flex-col h-7 overflow-hidden">
+                    <span class="block duration-300 group-hover:-translate-y-full">Book a discovery call</span> 
+                    <span class="block duration-300 group-hover:-translate-y-full">Book a discovery call</span> 
+                  </div>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -42,56 +50,68 @@
     <!-- Services Section -->
     <section class="lg:-mt-28 pt-20 lg:pt-0 pb-12 md:pb-24">
         <div class="container">
-          <div class="grid lg:grid-cols-2 gap-x-20 gap-y-24">
-             <a class="flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
-                <svg class="text-blue absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
-                </svg>
-                <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
-                <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
-             </a>
+          <ul class="grid lg:grid-cols-2 gap-x-20 gap-y-24">
+            <li data-aos="fade-up" data-aos-delay="0">
+              <a class="group duration-500 transition-all scale-100 hover:scale-[102%] hover:shadow-[2px_2px_24px_0px_#0000001A] hover:-translate-y-1  flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
+                  <svg class="group-hover:rotate-180 duration-1000 text-blue absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
+                  </svg>
+                  <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
+                  <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
+              </a>
+            </li>
 
-             <a class="flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
-              <svg class="text-teal absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
-              </svg>
-              <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
-              <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
-            </a>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <a class="group duration-500 transition-all scale-100 hover:scale-[102%] hover:shadow-[2px_2px_24px_0px_#0000001A] hover:-translate-y-1  flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
+                  <svg class="group-hover:rotate-180 duration-1000 text-teal absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
+                  </svg>
+                  <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
+                  <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
+              </a>
+            </li>
 
-            <a class="flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
-              <svg class="text-purple absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
-              </svg>
-              <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
-              <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
-             </a>
+            <li data-aos="fade-up" data-aos-delay="0">
+              <a class="group duration-500 transition-all scale-100 hover:scale-[102%] hover:shadow-[2px_2px_24px_0px_#0000001A] hover:-translate-y-1  flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
+                  <svg class="group-hover:rotate-180 duration-1000 text-purple absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
+                  </svg>
+                  <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
+                  <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
+              </a>
+            </li>
 
-             <a class="flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
-              <svg class="text-blue absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
-              </svg>
-              <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
-              <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
-             </a>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <a class="group duration-500 transition-all scale-100 hover:scale-[102%] hover:shadow-[2px_2px_24px_0px_#0000001A] hover:-translate-y-1  flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
+                  <svg class="group-hover:rotate-180 duration-1000 text-blue absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
+                  </svg>
+                  <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
+                  <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
+              </a>
+            </li>
 
+            <li data-aos="fade-up" data-aos-delay="0">
+              <a class="group duration-500 transition-all scale-100 hover:scale-[102%] hover:shadow-[2px_2px_24px_0px_#0000001A] hover:-translate-y-1  flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
+                  <svg class="group-hover:rotate-180 duration-1000 text-teal absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
+                  </svg>
+                  <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
+                  <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
+              </a>
+            </li>
 
-             <a class="flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
-              <svg class="text-teal absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
-              </svg>
-              <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
-              <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
-             </a>
+            <li data-aos="fade-up" data-aos-delay="200">
+              <a class="group duration-500 transition-all scale-100 hover:scale-[102%] hover:shadow-[2px_2px_24px_0px_#0000001A] hover:-translate-y-1  flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
+                  <svg class="group-hover:rotate-180 duration-1000 text-purple absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
+                  </svg>
+                  <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
+                  <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
+              </a>
+            </li>
 
-             <a class="flex flex-col rounded-lg pt-24 px-10 pb-8 md:p-16 bg-warm-white gap-10 min-h-[336px] relative" href="javascript:;">
-              <svg class="text-purple absolute -top-12 left-1/2 md:-left-12 -translate-x-1/2 md:translate-x-0" width="111" height="111" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M108.629 64.5168L100.764 84.516C98.2032 91.2841 93.0213 96.6495 86.375 99.5769L66.7429 108.174C60.0974 111.101 52.6594 111.223 45.9522 108.601L25.8936 100.797C19.2481 98.2359 13.8221 92.9919 10.8949 86.4069L2.29837 66.7731C-0.628152 60.127 -0.750177 52.6884 1.87128 45.9197L9.61433 25.9205C12.2968 19.2134 17.4794 13.848 24.0639 10.9206L43.6961 2.32333C50.2806 -0.603435 57.7796 -0.786488 64.5478 1.8962L84.4843 9.63988C91.2519 12.2616 96.6168 17.4446 99.544 24.0906L108.141 43.7244C111.067 50.3094 111.25 57.8091 108.629 64.5168H108.629Z" fill="currentColor"/>
-              </svg>
-              <h2 class="text-[34px] leading-[1.2] font-display">Service Headline</h2>
-              <p class="text-lg leading-[1.2]">Short description of the service would go here in this space it doesn’t need to be to long probably no longer then this to be honest.</p>
-             </a>
-          </div>
+            </ul>
         </div>
     </section>
 
@@ -120,12 +140,32 @@
               <!-- Border left -->
               <div class="h-[128px] absolute bottom-0 left-0 border-gradient-left hidden lg:block"></div>
               <p class="text-lg leading-[1.2] md:px-2">To find out more or book one of our services get in and touch </p>
-              <button class="font-roboto px-5 py-2.5 text-xl rounded-xl font-medium text-white bg-foreground cursor-pointer shadow-[2px_2px_24px_0px_#0000001A]">Book a discovery call</button>
+
+              <button class="font-roboto px-5 py-2.5 text-xl rounded-xl group font-medium text-white bg-foreground cursor-pointer shadow-[2px_2px_24px_0px_#0000001A]">
+                <div class="flex flex-col h-7 overflow-hidden">
+                  <span class="block duration-300 group-hover:-translate-y-full">Book a discovery call</span> 
+                  <span class="block duration-300 group-hover:-translate-y-full">Book a discovery call</span> 
+                </div>
+              </button>
             </div>
             
         </div>
       </div>
     </footer>
 
+    
+      <!-- AOS JS -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const isMobile = window.innerWidth <= 768;  
+      
+          AOS.init({
+            offset: isMobile ? 50 : 120,
+            duration: 700,
+            easing: 'ease-in-out-quart',
+          });
+        });
+      </script>
 </body>
 </html>
